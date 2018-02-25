@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -O3 -std=c++11 -msse4.2 -fopenmp  -shared -Wl,-soname,librecognition_lib.so -o librecognition_lib.so CMakeFiles/recognition_lib.dir/cpp_modules/recognition/src/sphereface/sphereface.cpp.o CMakeFiles/recognition_lib.dir/cpp_modules/recognition/src/net_caffe.cpp.o  -L/home/nice/data/sphereface/tools/caffe-sphereface/build/lib  -L/usr/local/cuda-8.0/lib64 

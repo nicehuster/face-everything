@@ -1,0 +1,10 @@
+压缩包是用检测加跟踪的人脸定位算法。其中：
+runtracker.cpp 是我用来测试功能的代码，可以不用包含于工程中
+其余代码为源码
+
+算法使用：可参考runtracker.cpp
+1.包含头文件   #include "kcftracker.hpp"
+2.在读入视频帧之前，构造对象  KCFTracker tracker(true, false, true, true);
+3.对于每一帧图像，调用函数，得到定位结果result   tracker.faceResult(frame,result);//函数原型void KCFTracker::faceResult(cv::Mat image,cv::Rect &facepos);
+
+

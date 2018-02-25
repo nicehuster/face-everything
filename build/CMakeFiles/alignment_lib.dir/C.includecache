@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../cpp_modules/alignment/include/lbf/blas.h
+blasp.h
+../cpp_modules/alignment/include/lbf/blasp.h
+
+../cpp_modules/alignment/include/lbf/blasp.h
+
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/daxpy.c
+blas.h
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/blas.h
+
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/ddot.c
+blas.h
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/blas.h
+
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/dnrm2.c
+math.h
+-
+blas.h
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/blas.h
+
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/dscal.c
+blas.h
+/home/nice/data/face-everthing/cpp_modules/alignment/src/lbf/blas.h
+

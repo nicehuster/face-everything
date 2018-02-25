@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/nice/data/face-everthing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6c0cf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6c0cf.dir/build.make CMakeFiles/cmTC_6c0cf.dir/build
+make[1]: Entering directory '/mnt/data/nice/face-everthing/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6c0cf.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -fPIC    -o CMakeFiles/cmTC_6c0cf.dir/CheckSymbolExists.c.o   -c /home/nice/data/face-everthing/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_6c0cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6c0cf.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC      CMakeFiles/cmTC_6c0cf.dir/CheckSymbolExists.c.o  -o cmTC_6c0cf 
+CMakeFiles/cmTC_6c0cf.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6c0cf.dir/build.make:97: recipe for target 'cmTC_6c0cf' failed
+make[1]: *** [cmTC_6c0cf] Error 1
+make[1]: Leaving directory '/mnt/data/nice/face-everthing/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6c0cf/fast' failed
+make: *** [cmTC_6c0cf/fast] Error 2
+
+File /home/nice/data/face-everthing/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nice/data/face-everthing/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b7947/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7947.dir/build.make CMakeFiles/cmTC_b7947.dir/build
+make[1]: Entering directory '/mnt/data/nice/face-everthing/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7947.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_b7947.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b7947
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7947.dir/link.txt --verbose=1
+/usr/bin/cc  -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create     CMakeFiles/cmTC_b7947.dir/CheckFunctionExists.c.o  -o cmTC_b7947 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_b7947.dir/build.make:97: recipe for target 'cmTC_b7947' failed
+make[1]: *** [cmTC_b7947] Error 1
+make[1]: Leaving directory '/mnt/data/nice/face-everthing/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b7947/fast' failed
+make: *** [cmTC_b7947/fast] Error 2
+
+
